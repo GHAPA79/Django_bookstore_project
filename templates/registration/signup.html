@@ -1,11 +1,11 @@
 {% extends '_base.html' %}
 
-{% block page_title %}Log In{% endblock page_title %}
+{% block page_title %}Sign Up{% endblock page_title %}
 
 {% block content %}
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Log in</button>
+        <button type="submit">Sign Up</button>
     </form>
 {% endblock content %}
