@@ -8,6 +8,7 @@
     <form action="" method="post">
         {% csrf_token %}
         <h1>آیا از حذف کتاب "{{ book.title }}" مطمعن هستید؟</h1>
-        <input type="submit" value="بله" class="btn btn-danger">
+        <input type="submit" value="بله" class="btn btn-danger"> /
+        <a href="{% url 'book_list' %}">لیست همه کتاب ها</a>
     </form>
 {% endblock content %}
