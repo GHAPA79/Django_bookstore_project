@@ -6,7 +6,7 @@
     {% for book in books %}
         <a href="{{ book.get_absolute_url }}"><h1>{{ book.title|capfirst }}</h1></a>
         <p>{{ book.author|capfirst }}</p>
-        <p>{{ book.description }}</p>
+        <p>{{ book.description|truncatewords:6 }}</p>
         <br>
     {% endfor %}
     <a href="{% url 'book_create' %}">اضافه کردن کتاب</a>
