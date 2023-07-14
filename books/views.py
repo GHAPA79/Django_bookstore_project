@@ -34,7 +34,7 @@ def book_detail_view(request, pk):
     else:
         comment_form = CommentForm()
 
-    book_comments = book.comments.all()
+    book_comments = book.comments.all().order_by('-datetime_created')
 
     return render(request, 'books/book_detail.html', {
         'book': book,
